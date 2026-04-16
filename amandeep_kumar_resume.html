@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amandeep Kumar — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0b0f0e;
+    --surface: #111714;
+    --surface2: #161d1a;
+    --border: #1e2d27;
+    --accent: #3dffa0;
+    --accent-dim: #1a4f37;
+    --accent-glow: rgba(61,255,160,0.12);
+    --text: #e8f0eb;
+    --muted: #7a9186;
+    --faint: #3a4f44;
+    --white: #ffffff;
+    --red: #ff6b6b;
+    --gold: #f0c040;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: #fff; color: #111; font-size: 11.5px; }
+    :root {
+      --bg: #fff; --surface: #f6f9f7; --surface2: #eef4f0;
+      --border: #cde0d5; --accent: #107a42; --accent-dim: #d4edd8;
+      --accent-glow: rgba(16,122,66,0.07); --text: #111;
+      --muted: #4a6b57; --faint: #c0d9cb; --white: #111;
+    }
+    .wrapper { max-width: 100%; padding: 0; }
+    .page { border-radius: 0; box-shadow: none; }
+    .sidebar { background: var(--surface) !important; }
+    .no-print { display: none !important; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+  /* ── LAYOUT ── */
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  .print-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+  }
+
+  .print-btn button {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s;
+  }
+  .print-btn button:hover { opacity: 0.85; }
+
+  .page {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 0 80px rgba(61,255,160,0.04), 0 4px 40px rgba(0,0,0,0.5);
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: 36px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .avatar-block {
+    text-align: center;
+  }
+
+  .avatar-ring {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent) 0%, #0d7a45 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    color: var(--bg);
+    font-weight: 400;
+    box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--accent-dim), 0 0 24px var(--accent-glow);
+  }
+
+  .s-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .s-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .s-section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .contact-list li .ico {
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 12px;
+  }
+
+  .contact-list a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-list a:hover { color: var(--accent); }
+
+  /* Skills */
+  .skill-group { margin-bottom: 16px; }
+  .skill-group-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .pill-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .pill {
+    background: var(--accent-glow);
+    border: 1px solid var(--accent-dim);
+    color: var(--text);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 10.5px;
+    font-family: 'DM Mono', monospace;
+    line-height: 1.6;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .pill:hover { background: rgba(61,255,160,0.2); border-color: var(--accent); }
+
+  /* Languages */
+  .lang-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .lang-item { display: flex; justify-content: space-between; align-items: center; font-size: 11.5px; }
+  .lang-name { color: var(--text); }
+  .lang-level {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .lang-dots { display: flex; gap: 3px; margin-top: 4px; }
+  .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--faint);
+    transition: background 0.2s;
+  }
+  .dot.filled { background: var(--accent); }
+
+  /* Education sidebar */
+  .edu-item { margin-bottom: 14px; }
+  .edu-deg {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 2px;
+  }
+  .edu-inst {
+    font-size: 10.5px;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .edu-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+  }
+
+  /* ── MAIN ── */
+  .main {
+    background: var(--surface2);
+    padding: 36px 32px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* Header */
+  .main-header { border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+
+  .main-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 34px;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+
+  .main-name span { color: var(--accent); }
+
+  .main-tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .summary {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 600px;
+  }
+
+  /* Section */
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .section-title h2 {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* Experience */
+  .exp-item {
+    margin-bottom: 18px;
+    padding-left: 14px;
+    border-left: 2px solid var(--border);
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  .exp-item:hover { border-color: var(--accent); }
+  .exp-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--faint);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .exp-item:hover::before {
+    border-color: var(--accent);
+    background: var(--accent);
+  }
+  .exp-item:last-child { margin-bottom: 0; }
+
+  .exp-role {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1px;
+  }
+
+  .exp-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    margin-bottom: 6px;
+    align-items: center;
+  }
+
+  .exp-company {
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    color: var(--accent);
+  }
+
+  .exp-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .exp-bullets li {
+    font-size: 11.5px;
+    color: var(--muted);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .exp-bullets li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  /* Projects */
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .proj-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .proj-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent-glow);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  .proj-card:hover { border-color: var(--accent); box-shadow: 0 0 18px var(--accent-glow); }
+  .proj-card:hover::after { opacity: 1; }
+
+  .proj-card.featured { grid-column: span 2; }
+
+  .proj-icon { font-size: 18px; margin-bottom: 6px; }
+
+  .proj-name {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .proj-desc {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.55;
+    margin-bottom: 8px;
+  }
+
+  .proj-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .proj-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border-radius: 3px;
+    padding: 1px 6px;
+  }
+
+  /* Achievements */
+  .ach-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .ach-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 10px 14px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  .ach-item .ach-ico { font-size: 15px; flex-shrink: 0; }
+
+  /* Certs */
+  .cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .cert-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+
+  .cert-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .cert-badge {
+    margin-left: auto;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    background: rgba(240,192,64,0.12);
+    border: 1px solid rgba(240,192,64,0.3);
+    color: var(--gold);
+    border-radius: 4px;
+    padding: 1px 7px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="print-btn no-print">
+    <button onclick="window.print()">⬇ Download / Print PDF</button>
+  </div>
+
+  <div class="page">
+
+    <!-- ════ SIDEBAR ════ -->
+    <aside class="sidebar">
+
+      <div class="avatar-block">
+        <div class="avatar-ring">AK</div>
+        <div class="s-name">Amandeep Kumar</div>
+        <div class="s-title">CS Engineering Student</div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="s-section-label">Contact</div>
+        <ul class="contact-list">
+          <li><span class="ico">📍</span> Darbhanga, Bihar</li>
+          <li><span class="ico">📞</span> 8092921881</li>
+          <li><span class="ico">✉</span> <a href="mailto:amandeep3583kr@gmail.com">amandeep3583kr@gmail.com</a></li>
+          <li><span class="ico">💼</span> <a href="https://www.linkedin.com/in/kramandeep" target="_blank">linkedin.com/in/kramandeep</a></li>
+          <li><span class="ico">🐱</span> <a href="https://github.com/HybridAmandeep" target="_blank">github.com/HybridAmandeep</a></li>
+        </ul>
+      </div>
+
+      <!-- Skills -->
+      <div>
+        <div class="s-section-label">Technical Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Programming</div>
+          <div class="pill-wrap">
+            <span class="pill">Python</span>
+            <span class="pill">C++</span>
+            <span class="pill">Kotlin</span>
+            <span class="pill">HTML/CSS</span>
+            <span class="pill">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">IoT & Embedded</div>
+          <div class="pill-wrap">
+            <span class="pill">ESP32</span>
+            <span class="pill">ESP8266</span>
+            <span class="pill">Arduino</span>
+            <span class="pill">Sensors</span>
+            <span class="pill">PCB Design</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Platforms & Tools</div>
+          <div class="pill-wrap">
+            <span class="pill">Firebase</span>
+            <span class="pill">Google Cloud</span>
+            <span class="pill">GitHub</span>
+            <span class="pill">Jetpack Compose</span>
+            <span class="pill">Google Maps SDK</span>
+            <span class="pill">Packet Tracer</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Design</div>
+          <div class="pill-wrap">
+            <span class="pill">Photoshop</span>
+            <span class="pill">Canva</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div>
+        <div class="s-section-label">Education</div>
+        <div class="edu-item">
+          <div class="edu-deg">B.Tech — Computer Science Engineering</div>
+          <div class="edu-inst">Manav Rachna Int'l Institute of Research & Studies</div>
+          <div class="edu-year">2023 – 2027</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-deg">Senior Secondary (XII) — PCM</div>
+          <div class="edu-inst">Public School Bela, Darbhanga</div>
+          <div class="edu-year">2020 – 2022</div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div>
+        <div class="s-section-label">Languages</div>
+        <ul class="lang-list">
+          <li class="lang-item">
+            <div>
+              <span class="lang-name">Hindi</span>
+              <div class="lang-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+              </div>
+            </div>
+            <span class="lang-level">Native</span>
+          </li>
+          <li class="lang-item">
+            <div>
+              <span class="lang-name">Maithili</span>
+              <div class="lang-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+              </div>
+            </div>
+            <span class="lang-level">Native</span>
+          </li>
+          <li class="lang-item">
+            <div>
+              <span class="lang-name">English</span>
+              <div class="lang-dots">
+                <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+              </div>
+            </div>
+            <span class="lang-level">Professional</span>
+          </li>
+          <li class="lang-item">
+            <div>
+              <span class="lang-name">German</span>
+              <div class="lang-dots">
+                <span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+            </div>
+            <span class="lang-level">Elementary</span>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- ════ MAIN ════ -->
+    <main class="main">
+
+      <!-- Header -->
+      <div class="main-header">
+        <div class="main-tagline">CSE Student · IoT · Android · Cloud · Design</div>
+        <div class="main-name">Amandeep <span>Kumar</span></div>
+        <p class="summary">
+          Computer Science Engineering student with hands-on experience in IoT systems, Android development, machine learning, frontend development, and graphic design. Currently developing <strong style="color:var(--text)">PinPal</strong>, a real-time Android ride pooling app using Kotlin, Firebase, and Google Maps SDK. Active contributor to the openSUSE open-source ecosystem, with a track record of shipping real-world technical solutions.
+        </p>
+      </div>
+
+      <!-- Experience -->
+      <section>
+        <div class="section-title"><h2>Experience</h2></div>
+
+        <div class="exp-item">
+          <div class="exp-role">Graphic Design & Media Coordinator · Event Manager & Host</div>
+          <div class="exp-meta">
+            <span class="exp-company">openSUSE Project — openSUSE.Asia Summit 2025</span>
+            <span class="exp-date">Jul – Sep 2025 · Faridabad, HR</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Designed posters, banners, certificates, and promotional creatives for international summit</li>
+            <li>Maintained consistent visual branding across all event materials and digital channels</li>
+            <li>Served as Event Manager & Host, coordinating sessions and supporting speakers</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-role">Frontend Web Developer</div>
+          <div class="exp-meta">
+            <span class="exp-company">Vaishnav Technologies</span>
+            <span class="exp-date">Jun – Aug 2025</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Developed frontend web pages, improving UI elements and overall layout</li>
+            <li>Supported usability testing and iterative design improvements</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-role">Graphic Designer — Magazine Layout Contributor</div>
+          <div class="exp-meta">
+            <span class="exp-company">Dr OP Bhalla Foundation</span>
+            <span class="exp-date">Aug 2024 – Mar 2025 · Faridabad</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Designed article layouts and visual creatives for the "Karmayogi" institutional magazine</li>
+            <li>Created posters and publication-ready visuals using Canva and Photoshop</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-role">Graphic Designer & Video Editor</div>
+          <div class="exp-meta">
+            <span class="exp-company">RayBeam Ventures · 2nd Life Inning · Arushi Traders · SoftWash</span>
+            <span class="exp-date">Mar 2023 – Jul 2024</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Delivered branding, promotional graphics, and short-form video content across four organisations</li>
+            <li>Managed social media assets and product-related visual campaigns</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section>
+        <div class="section-title"><h2>Projects</h2></div>
+        <div class="project-grid">
+
+          <div class="proj-card featured">
+            <div class="proj-icon">📱</div>
+            <div class="proj-name">PinPal — Real-Time Ride Pooling & Friend Tracking App <span style="font-family:var(--dm-mono);font-size:10px;color:var(--accent);margin-left:6px;font-family:'DM Mono',monospace;">Current</span></div>
+            <div class="proj-desc">Full-stack Android application for real-time ride pooling with live GPS tracking (5-second sync), group location sharing, Firebase notifications, and cloud functions. Follows MVVM architecture with WorkManager scheduling.</div>
+            <div class="proj-tags">
+              <span class="proj-tag">Kotlin</span>
+              <span class="proj-tag">Jetpack Compose</span>
+              <span class="proj-tag">Firebase</span>
+              <span class="proj-tag">Google Maps SDK</span>
+              <span class="proj-tag">MVVM</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-icon">🤖</div>
+            <div class="proj-name">EcoSense Bot</div>
+            <div class="proj-desc">IoT robot monitoring environmental air conditions with real-time web dashboard and ESP32/ESP8266 sensor integration.</div>
+            <div class="proj-tags">
+              <span class="proj-tag">ESP32</span><span class="proj-tag">ESP8266</span><span class="proj-tag">IoT</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-icon">🖥️</div>
+            <div class="proj-name">Desk Bot</div>
+            <div class="proj-desc">Smart IoT desktop assistant with time, weather, alarm, and next-day forecast features plus mobile/web connectivity.</div>
+            <div class="proj-tags">
+              <span class="proj-tag">Arduino</span><span class="proj-tag">ESP8266</span><span class="proj-tag">OLED</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-icon">🌿</div>
+            <div class="proj-name">Healthy Leaves Detection</div>
+            <div class="proj-desc">CNN-based plant disease classification model trained on 1000+ images, achieving ~81% accuracy.</div>
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span><span class="proj-tag">TensorFlow</span><span class="proj-tag">Keras</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-icon">🧠</div>
+            <div class="proj-name">Diabetes Prediction System</div>
+            <div class="proj-desc">ML-based diabetes risk predictor with a user-friendly Streamlit web interface.</div>
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span><span class="proj-tag">Streamlit</span><span class="proj-tag">ML</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-icon">🌐</div>
+            <div class="proj-name">Network Infrastructure Sim</div>
+            <div class="proj-desc">Multi-campus network simulation with router/switch configuration and IP addressing in Cisco Packet Tracer.</div>
+            <div class="proj-tags">
+              <span class="proj-tag">Cisco Packet Tracer</span><span class="proj-tag">Networking</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section>
+        <div class="section-title"><h2>Certifications</h2></div>
+        <div class="cert-list">
+          <div class="cert-item">
+            <span class="cert-dot"></span>
+            Google Arcade Legend 2025 (C-1)
+            <span class="cert-badge">★ Legend</span>
+          </div>
+          <div class="cert-item">
+            <span class="cert-dot"></span>
+            Google Arcade Facilitator 2025
+          </div>
+          <div class="cert-item">
+            <span class="cert-dot"></span>
+            Google Cloud Foundations Certificate
+          </div>
+          <div class="cert-item">
+            <span class="cert-dot"></span>
+            Infrastructure in Google Cloud
+          </div>
+          <div class="cert-item">
+            <span class="cert-dot"></span>
+            Trust and Security with Google Cloud
+          </div>
+          <div class="cert-item">
+            <span class="cert-dot"></span>
+            Get Started with Pub/Sub
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements -->
+      <section>
+        <div class="section-title"><h2>Achievements</h2></div>
+        <div class="ach-grid">
+          <div class="ach-item"><span class="ach-ico">☁️</span> Completed <strong style="color:var(--text)">477 Google Cloud Labs</strong></div>
+          <div class="ach-item"><span class="ach-ico">🎙️</span> Event Manager & Host — openSUSE.Asia Summit 2025</div>
+          <div class="ach-item"><span class="ach-ico">🎨</span> Designed official media assets for international technical summit</div>
+          <div class="ach-item"><span class="ach-ico">📰</span> Contributor to institutional magazine publication (Karmayogi)</div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+</div>
+
+</body>
+</html>
