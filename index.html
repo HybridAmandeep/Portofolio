@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Amandeep Kumar - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Manrope:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;family=Plus+Jakarta+Sans:wght@600;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#1b1b1b",
+                        "surface-bright": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f0edec",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1c1b1b",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "background": "#fcf9f8",
+                        "outline-variant": "#bdcbb2",
+                        "tertiary-container": "#e3e3e1",
+                        "primary-container": "#7cff4f",
+                        "primary-fixed-dim": "#5fe133",
+                        "inverse-on-surface": "#f3f0ef",
+                        "inverse-surface": "#313030",
+                        "on-surface-variant": "#3e4a37",
+                        "tertiary-fixed": "#e2e3e1",
+                        "secondary-fixed": "#e2e2e2",
+                        "primary-fixed": "#7cff4f",
+                        "on-tertiary-container": "#636564",
+                        "on-primary-container": "#217400",
+                        "tertiary-fixed-dim": "#c6c7c5",
+                        "surface": "#fcf9f8",
+                        "surface-container-high": "#ebe7e7",
+                        "surface-variant": "#e5e2e1",
+                        "outline": "#6e7b65",
+                        "tertiary": "#5d5f5d",
+                        "primary": "#1f6d00",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-primary-fixed": "#052100",
+                        "on-primary-fixed-variant": "#155200",
+                        "inverse-primary": "#5fe133",
+                        "surface-tint": "#1f6d00",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-background": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary": "#5e5e5e",
+                        "on-secondary-container": "#646464",
+                        "on-tertiary-fixed": "#1a1c1b",
+                        "secondary-container": "#e2e2e2",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#454746",
+                        "surface-container-low": "#f6f3f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                        "4xl": "3rem"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "margin-tablet": "40px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "section-gap": "160px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Playfair Display"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["120px", { "lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "600" }],
+                        "headline-lg": ["64px", { "lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg-mobile": ["42px", { "lineHeight": "115%", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(124, 255, 79, 0.3);
+        }
+
+        .box-glow {
+            box-shadow: 0 0 30px rgba(124, 255, 79, 0.15);
+        }
+
+        .box-glow-hover:hover {
+            box-shadow: 0 0 40px rgba(124, 255, 79, 0.3);
+        }
+
+        .glass-panel {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .soft-shadow {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .dark-section {
+            background-color: #1c1b1b;
+            color: #ffffff;
+        }
+
+        .dark-section .text-on-surface {
+            color: #ffffff;
+        }
+
+        .dark-section .text-on-surface-variant {
+            color: #dcd9d9;
+        }
+
+        .network-line {
+            stroke: rgba(124, 255, 79, 0.5);
+            stroke-width: 1;
+            stroke-dasharray: 4;
+            animation: dash 20s linear infinite;
+        }
+
+        @keyframes dash {
+            to {
+                stroke-dashoffset: 1000;
+            }
+        }
+    
+        /* Custom utilities missing from pure Tailwind */
+        .magnetic-interaction {
+            will-change: transform;
+        }
+
+        .parallax-scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .parallax-scroll-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle noise texture for premium feel */
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+    
+    </style>
+</head>
+
+<body class="bg-background text-on-surface antialiased overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-7xl rounded-full bg-white/70 dark:bg-black/70 backdrop-blur-xl border border-white/40 dark:border-white/10 shadow-[0_20_40px_rgba(0,0,0,0.04)] z-50 transition-all cubic-bezier(0.23,1,0.32,1)">
+        <div class="flex justify-between items-center px-8 py-3">
+            <div
+                class="font-display-xl text-headline-md font-bold tracking-tighter text-on-surface dark:text-surface-bright select-none">
+                AMANDEEP
+            </div>
+            <div
+                class="hidden md:flex items-center gap-8 font-body-md text-body-md font-medium uppercase tracking-widest">
+                <a class="text-on-surface-variant dark:text-surface-dim hover:scale-105 transition-transform duration-300 hover:text-primary"
+                    href="#">Work</a>
+                <a class="text-on-surface-variant dark:text-surface-dim hover:scale-105 transition-transform duration-300 hover:text-primary"
+                    href="#">Service</a>
+                <a class="text-on-surface-variant dark:text-surface-dim hover:scale-105 transition-transform duration-300 hover:text-primary"
+                    href="#">Experience</a>
+                <a class="text-on-surface-variant dark:text-surface-dim hover:scale-105 transition-transform duration-300 hover:text-primary"
+                    href="#">About</a>
+            </div>
+            <button
+                class="bg-inverse-surface text-inverse-on-surface px-6 py-2 rounded-full font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-2 group">
+                Let's Talk
+                <span
+                    class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+        </div>
+    </nav>
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-gutter px-margin-mobile md:px-margin-desktop overflow-hidden">
+            <!-- Background Glow -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-primary-fixed/20 rounded-full blur-[120px] -z-10 pointer-events-none">
+            </div>
+            <div class="w-full max-w-container-max mx-auto flex flex-col items-center text-center relative z-10">
+                <!-- Status Badge -->
+                <div class="glass-panel px-4 py-2 rounded-full flex items-center gap-2 mb-8 animate-fade-in-up">
+                    <span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+                    <span class="font-label-caps text-label-caps text-on-surface-variant">Available for new
+                        opportunities</span>
+                </div>
+                <!-- Headline -->
+                <h1
+                    class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 max-w-4xl mx-auto">
+                    HI I'M AMANDEEP KUMAR
+                </h1>
+                <!-- Roles -->
+                <div
+                    class="flex flex-wrap justify-center gap-4 mb-12 font-label-caps text-label-caps text-on-surface-variant tracking-widest">
+                    <span class="">PRODUCT DESIGNER</span>
+                    <span class="text-primary-fixed-dim opacity-50">•</span>
+                    <span class="">ANDROID DEVELOPER</span>
+                    <span class="text-primary-fixed-dim opacity-50">•</span>
+                    <span class="">IOT ENGINEER</span>
+                </div>
+                <!-- Portrait Container -->
+                <div
+                    class="relative w-[300px] h-[400px] md:w-[400px] md:h-[500px] mb-12 rounded-[200px] overflow-hidden soft-shadow group">
+                    <img alt="Amandeep Kumar Portrait"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                        data-alt="A highly professional, high-end black and white studio portrait of a young male professional, resembling Amandeep Kumar. He is looking directly at the camera with a confident, calm expression. The lighting is dramatic yet soft, highlighting his facial features against a clean, minimal background. The aesthetic is modern, editorial, and sophisticated, aligning with a premium Minimal Luxury Tech portfolio. The image should feel tactile and high-resolution."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgQFzUtHl_i-BsCI9o-Fd6JNfR3CHgBjTfTupkPVC5A6bUJHWTW4SGFv139GwUKh6SWqX_PyveB7FV_XYIIEV0vQ1csuVSJU5KBj8R9RSAQPS4aNiAk7Fwle414c6FBO7uSQ2QbM5nAH1nWF8KQIAgHCURfkQknus4zQeB-tpbojt0K07iEVL7W0p4db51jfCPR9nOqSacXaiJxegsxjGNT0jRElYdt2OSIrbqykpR7kJN9xh3k2GzDKaYh86zjS6U5KINuAEXLVjV" />
+                    <!-- Decorative subtle overlay -->
+                    <div class="absolute inset-0 border border-white/20 rounded-[200px] pointer-events-none"></div>
+                </div>
+                <!-- Description -->
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    Designing meaningful digital experiences while building intelligent systems. Bridging the gap
+                    between human-centric design and robust technological architecture.
+                </p>
+                <!-- Actions -->
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <button
+                        class="bg-inverse-surface text-inverse-on-surface px-8 py-4 rounded-full font-label-caps text-label-caps hover:bg-black hover:text-white transition-all hover:border-primary-fixed hover:box-glow border border-transparent flex items-center gap-2 group">
+                        View Projects
+                        <span
+                            class="material-symbols-outlined group-hover:translate-y-1 transition-transform">arrow_downward</span>
+                    </button>
+                    <button
+                        class="glass-panel text-on-surface px-8 py-4 rounded-full font-label-caps text-label-caps hover:-translate-y-1 transition-transform flex items-center gap-2 border border-outline-variant">
+                        Download Resume
+                        <span class="material-symbols-outlined">download</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Introduction / Typography Section -->
+        <section class="py-section-gap overflow-hidden bg-surface-container-low border-y border-outline-variant/30">
+            <div class="marquee-container opacity-20 hover:opacity-100 transition-opacity duration-700 cursor-default">
+                <div
+                    class="marquee-content font-display-xl text-[160px] md:text-[200px] leading-none text-transparent bg-clip-text bg-gradient-to-r from-on-surface via-primary to-on-surface font-bold tracking-tighter">
+                    DESIGN • ENGINEERING • INTELLIGENCE • INNOVATION • IMPACT • DESIGN • ENGINEERING • INTELLIGENCE •
+                    INNOVATION • IMPACT •
+                </div>
+            </div>
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 text-center">
+                <h2
+                    class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface max-w-5xl mx-auto leading-tight">
+                    I CREATE PRODUCTS THAT COMBINE <span class="italic font-display-xl text-primary">BEAUTIFUL
+                        DESIGN</span> WITH POWERFUL TECHNOLOGY.
+                </h2>
+            </div>
+        </section>
+        <!-- Section 4: My Process -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background relative overflow-hidden">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-20 text-center">
+                    <div
+                        class="font-label-caps text-label-caps text-on-surface-variant mb-4 inline-flex items-center gap-2">
+                        <span class="w-8 h-[1px] bg-outline"></span>
+                        METHODOLOGY
+                        <span class="w-8 h-[1px] bg-outline"></span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface">My Process</h2>
+                </div>
+                <div class="relative flex flex-col md:flex-row justify-between gap-12 mt-32">
+                    <!-- SVG Connection Lines -->
+                    <svg class="absolute top-1/2 left-0 w-full h-32 -translate-y-1/2 hidden md:block z-0 pointer-events-none"
+                        preserveaspectratio="none" viewbox="0 0 1000 100">
+                        <path d="M 100,50 C 300,50 300,-50 500,50 C 700,150 700,50 900,50" fill="none"
+                            stroke="rgba(124, 255, 79, 0.3)" stroke-dasharray="10" stroke-width="2"></path>
+                    </svg>
+                    <!-- Card 1 -->
+                    <div
+                        class="relative z-10 glass-panel p-8 rounded-3xl soft-shadow md:-mt-16 w-full md:w-1/3 group hover:-translate-y-4 transition-transform duration-500 bg-surface-container-low">
+                        <div
+                            class="font-display-xl text-[80px] text-primary/10 absolute -top-10 -left-4 group-hover:text-primary/20 transition-colors">
+                            01</div>
+                        <h3 class="font-headline-md text-[28px] text-on-surface mb-4 mt-8">DISCOVER</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Understanding the problem space
+                            through deep research, user interviews, and technical feasibility analysis. Laying the
+                            foundation for meaningful solutions.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="relative z-10 glass-panel p-8 rounded-3xl soft-shadow w-full md:w-1/3 group hover:-translate-y-4 transition-transform duration-500 bg-surface-container-low">
+                        <div
+                            class="font-display-xl text-[80px] text-primary/10 absolute -top-10 -left-4 group-hover:text-primary/20 transition-colors">
+                            02</div>
+                        <h3 class="font-headline-md text-[28px] text-on-surface mb-4 mt-8">DESIGN</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Crafting intuitive interfaces,
+                            defining system architectures, and prototyping user flows. Blending aesthetic appeal with
+                            structural integrity.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="relative z-10 glass-panel p-8 rounded-3xl soft-shadow md:mt-16 w-full md:w-1/3 group hover:-translate-y-4 transition-transform duration-500 bg-surface-container-low">
+                        <div
+                            class="font-display-xl text-[80px] text-primary/10 absolute -top-10 -left-4 group-hover:text-primary/20 transition-colors">
+                            03</div>
+                        <h3 class="font-headline-md text-[28px] text-on-surface mb-4 mt-8">BUILD</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Translating designs into robust
+                            code, integrating hardware where necessary, and deploying intelligent models. Bringing
+                            concepts to life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 5: Skills Network -->
+        <section class="py-section-gap bg-surface-container-lowest overflow-hidden border-y border-outline-variant/30">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-16">
+                    <div class="font-label-caps text-label-caps text-primary mb-4 inline-flex items-center gap-2">
+                        <span class="w-8 h-[1px] bg-primary-fixed"></span>
+                        TECHNICAL DNA
+                        <span class="w-8 h-[1px] bg-primary-fixed"></span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Skills Ecosystem</h2>
+                </div>
+                <div class="relative min-h-[700px] flex items-center justify-center">
+                    <!-- Animated Background Connections -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewbox="0 0 1000 700">
+                        <defs>
+                            <lineargradient id="pulse-gradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                                <stop offset="0%" stop-color="#7cff4f" stop-opacity="0"></stop>
+                                <stop offset="50%" stop-color="#7cff4f" stop-opacity="0.6"></stop>
+                                <stop offset="100%" stop-color="#7cff4f" stop-opacity="0"></stop>
+                            </lineargradient>
+                        </defs>
+                        <!-- Organic Connection Lines -->
+                        <path d="M 500,350 Q 300,350 250,150" fill="none" stroke="#7cff4f" stroke-opacity="0.1"
+                            stroke-width="2"></path>
+                        <path d="M 500,350 Q 700,350 750,150" fill="none" stroke="#7cff4f" stroke-opacity="0.1"
+                            stroke-width="2"></path>
+                        <path d="M 500,350 Q 500,550 500,600" fill="none" stroke="#7cff4f" stroke-opacity="0.1"
+                            stroke-width="2"></path>
+                        <!-- Pulsing paths -->
+                        <path class="network-line" d="M 500,350 Q 300,350 250,150" fill="none"
+                            stroke="url(#pulse-gradient)" stroke-width="3"></path>
+                        <path class="network-line" d="M 500,350 Q 700,350 750,150" fill="none"
+                            stroke="url(#pulse-gradient)" stroke-width="3"></path>
+                        <path class="network-line" d="M 500,350 Q 500,550 500,600" fill="none"
+                            stroke="url(#pulse-gradient)" stroke-width="3"></path>
+                    </svg>
+                    <!-- Central Core Orb -->
+                    <div class="relative z-20 w-48 h-48 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-primary-fixed/30 rounded-full blur-2xl animate-pulse"></div>
+                        <div
+                            class="absolute inset-0 border border-primary-fixed/50 rounded-full animate-spin [animation-duration:8s]">
+                        </div>
+                        <div
+                            class="relative w-40 h-40 bg-white rounded-full flex flex-col items-center justify-center text-center shadow-[0_0_50px_rgba(124,255,79,0.2)] border border-primary-fixed/20">
+                            <span
+                                class="font-label-caps text-[10px] text-on-surface-variant mb-1 uppercase tracking-tighter">Core</span>
+                            <span class="font-headline-md text-[20px] text-on-surface leading-tight">COMPETENCIES</span>
+                        </div>
+                    </div>
+                    <!-- Category Cards -->
+                    <!-- Design & UX -->
+                    <div
+                        class="absolute top-0 md:left-20 glass-panel p-6 rounded-3xl soft-shadow w-full max-w-[280px] hover:-translate-y-2 transition-transform duration-500 z-30">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary">design_services</span>
+                            <h3 class="font-headline-md text-[18px]">Design &amp; UX</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">Product
+                                Design</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">UI
+                                Design</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">Prototyping</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">User
+                                Research</span>
+                        </div>
+                    </div>
+                    <!-- Development & Engineering -->
+                    <div
+                        class="absolute top-0 md:right-20 glass-panel p-6 rounded-3xl soft-shadow w-full max-w-[280px] hover:-translate-y-2 transition-transform duration-500 z-30">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary">terminal</span>
+                            <h3 class="font-headline-md text-[18px]">Dev &amp; Engineering</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">Android
+                                / Kotlin</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">Full
+                                Stack</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">Architecture</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">Git
+                                / CI/CD</span>
+                        </div>
+                    </div>
+                    <!-- Emerging Tech -->
+                    <div
+                        class="absolute bottom-0 glass-panel p-6 rounded-3xl soft-shadow w-full max-w-[280px] hover:-translate-y-2 transition-transform duration-500 z-30">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary">smart_toy</span>
+                            <h3 class="font-headline-md text-[18px]">Emerging Tech</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">ML
+                                Solutions</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">IoT
+                                / Arduino</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">Edge
+                                AI</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container rounded-full text-label-caps text-[10px] hover:bg-primary-fixed hover:box-glow transition-all cursor-default">Sensors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 6: Experience Journey -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop dark-section">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-20 text-center">
+                    <h2 class="font-headline-lg text-headline-lg text-white">Experience Journey</h2>
+                </div>
+                <div class="relative border-l border-outline-variant/30 ml-4 md:ml-0 md:pl-0">
+                    <!-- Timeline Item 1 -->
+                    <div class="mb-12 relative pl-8 md:pl-0">
+                        <div
+                            class="hidden md:block absolute top-0 -left-2.5 w-5 h-5 rounded-full bg-primary-fixed z-10 box-glow">
+                        </div>
+                        <div
+                            class="md:hidden absolute top-0 -left-2.5 w-5 h-5 rounded-full bg-primary-fixed z-10 box-glow">
+                        </div>
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div
+                                class="md:w-1/4 font-label-caps text-label-caps text-primary-fixed mb-2 md:mb-0 md:text-right pt-1">
+                                2025
+                            </div>
+                            <div class="md:w-3/4">
+                                <h3 class="font-headline-md text-[24px] text-white mb-2">Google Arcade</h3>
+                                <p class="font-body-md text-body-md text-[#dcd9d9]">Participant &amp; Contributor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="mb-12 relative pl-8 md:pl-0">
+                        <div
+                            class="hidden md:block absolute top-0 -left-2 w-4 h-4 rounded-full border-2 border-outline-variant bg-[#1c1b1b] z-10">
+                        </div>
+                        <div
+                            class="md:hidden absolute top-0 -left-2 w-4 h-4 rounded-full border-2 border-outline-variant bg-[#1c1b1b] z-10">
+                        </div>
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div
+                                class="md:w-1/4 font-label-caps text-label-caps text-on-surface-variant mb-2 md:mb-0 md:text-right pt-1">
+                                2025
+                            </div>
+                            <div class="md:w-3/4">
+                                <h3 class="font-headline-md text-[24px] text-white mb-2">openSUSE</h3>
+                                <p class="font-body-md text-body-md text-[#dcd9d9]">Open Source Contributor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 3 -->
+                    <div class="mb-12 relative pl-8 md:pl-0">
+                        <div
+                            class="hidden md:block absolute top-0 -left-2 w-4 h-4 rounded-full border-2 border-outline-variant bg-[#1c1b1b] z-10">
+                        </div>
+                        <div
+                            class="md:hidden absolute top-0 -left-2 w-4 h-4 rounded-full border-2 border-outline-variant bg-[#1c1b1b] z-10">
+                        </div>
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div
+                                class="md:w-1/4 font-label-caps text-label-caps text-on-surface-variant mb-2 md:mb-0 md:text-right pt-1">
+                                2025
+                            </div>
+                            <div class="md:w-3/4">
+                                <h3 class="font-headline-md text-[24px] text-white mb-2">PinPal</h3>
+                                <p class="font-body-md text-body-md text-[#dcd9d9]">Lead Developer - Social Application
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 4 -->
+                    <div class="mb-12 relative pl-8 md:pl-0">
+                        <div
+                            class="hidden md:block absolute top-0 -left-2 w-4 h-4 rounded-full border-2 border-outline-variant bg-[#1c1b1b] z-10">
+                        </div>
+                        <div
+                            class="md:hidden absolute top-0 -left-2 w-4 h-4 rounded-full border-2 border-outline-variant bg-[#1c1b1b] z-10">
+                        </div>
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div
+                                class="md:w-1/4 font-label-caps text-label-caps text-on-surface-variant mb-2 md:mb-0 md:text-right pt-1">
+                                2024
+                            </div>
+                            <div class="md:w-3/4">
+                                <h3 class="font-headline-md text-[24px] text-white mb-2">Healthy Leaves</h3>
+                                <p class="font-body-md text-body-md text-[#dcd9d9]">AI/ML Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 5 -->
+                    <div class="mb-12 relative pl-8 md:pl-0">
+                        <div
+                            class="hidden md:block absolute top-0 -left-2 w-4 h-4 rounded-full border-2 border-outline-variant bg-[#1c1b1b] z-10">
+                        </div>
+                        <div
+                            class="md:hidden absolute top-0 -left-2 w-4 h-4 rounded-full border-2 border-outline-variant bg-[#1c1b1b] z-10">
+                        </div>
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div
+                                class="md:w-1/4 font-label-caps text-label-caps text-on-surface-variant mb-2 md:mb-0 md:text-right pt-1">
+                                2024
+                            </div>
+                            <div class="md:w-3/4">
+                                <h3 class="font-headline-md text-[24px] text-white mb-2">Desk Bot</h3>
+                                <p class="font-body-md text-body-md text-[#dcd9d9]">Hardware &amp; Software Developer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 6 -->
+                    <div class="relative pl-8 md:pl-0">
+                        <div
+                            class="hidden md:block absolute top-0 -left-2 w-4 h-4 rounded-full border-2 border-outline-variant bg-[#1c1b1b] z-10">
+                        </div>
+                        <div
+                            class="md:hidden absolute top-0 -left-2 w-4 h-4 rounded-full border-2 border-outline-variant bg-[#1c1b1b] z-10">
+                        </div>
+                        <div class="md:flex md:items-start md:gap-8">
+                            <div
+                                class="md:w-1/4 font-label-caps text-label-caps text-on-surface-variant mb-2 md:mb-0 md:text-right pt-1">
+                                2023
+                            </div>
+                            <div class="md:w-3/4">
+                                <h3 class="font-headline-md text-[24px] text-white mb-2">Network Infrastructure</h3>
+                                <p class="font-body-md text-body-md text-[#dcd9d9]">Systems Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 7: Services -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-headline-md text-headline-md text-on-surface mb-12">Services &amp; Offerings</h2>
+                <div class="flex flex-col gap-4">
+                    <!-- Accordion Item -->
+                    <div class="border-b border-outline-variant/30 pb-4 group cursor-pointer">
+                        <div class="flex justify-between items-center py-4">
+                            <h3
+                                class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">
+                                UI/UX &amp; Product Design</h3>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:rotate-45 transition-transform">add</span>
+                        </div>
+                    </div>
+                    <!-- Accordion Item -->
+                    <div class="border-b border-outline-variant/30 pb-4 group cursor-pointer">
+                        <div class="flex justify-between items-center py-4">
+                            <h3
+                                class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">
+                                Android Development</h3>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:rotate-45 transition-transform">add</span>
+                        </div>
+                    </div>
+                    <!-- Accordion Item -->
+                    <div class="border-b border-outline-variant/30 pb-4 group cursor-pointer">
+                        <div class="flex justify-between items-center py-4">
+                            <h3
+                                class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">
+                                ML Solutions</h3>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:rotate-45 transition-transform">add</span>
+                        </div>
+                    </div>
+                    <!-- Accordion Item -->
+                    <div class="border-b border-outline-variant/30 pb-4 group cursor-pointer">
+                        <div class="flex justify-between items-center py-4">
+                            <h3
+                                class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">
+                                IoT Engineering</h3>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:rotate-45 transition-transform">add</span>
+                        </div>
+                    </div>
+                    <!-- Accordion Item -->
+                    <div class="border-b border-outline-variant/30 pb-4 group cursor-pointer">
+                        <div class="flex justify-between items-center py-4">
+                            <h3
+                                class="font-headline-md text-[24px] text-on-surface group-hover:text-primary transition-colors">
+                                Full Stack Development</h3>
+                            <span
+                                class="material-symbols-outlined text-on-surface-variant group-hover:rotate-45 transition-transform">add</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 8: Achievements -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+            <div class="max-w-container-max mx-auto">
+                <h2 class="font-headline-md text-headline-md text-on-surface mb-12">Achievements</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Featured Card -->
+                    <div
+                        class="md:col-span-2 bg-primary-fixed text-on-primary-fixed p-12 rounded-[2rem] flex flex-col justify-between soft-shadow">
+                        <div class="font-label-caps text-label-caps mb-4 opacity-70">TOP ACHIEVEMENT</div>
+                        <h3 class="font-headline-lg text-[48px] leading-tight mb-8">Google Arcade 2025 Top Tier
+                            Completer</h3>
+                        <p class="font-body-md text-body-md opacity-80">Mastered complex cloud architecture challenges
+                            and demonstrated advanced problem-solving capabilities.</p>
+                    </div>
+                    <!-- Smaller Cards -->
+                    <div class="bg-surface-container p-8 rounded-[2rem] flex flex-col justify-between soft-shadow">
+                        <div class="font-label-caps text-label-caps mb-4 text-on-surface-variant">OPEN SOURCE</div>
+                        <h3 class="font-headline-md text-[24px] text-on-surface mb-4">openSUSE Contributor</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Active contributions to community
+                            projects.</p>
+                    </div>
+                    <div class="bg-surface-container p-8 rounded-[2rem] flex flex-col justify-between soft-shadow">
+                        <div class="font-label-caps text-label-caps mb-4 text-on-surface-variant">HACKATHON</div>
+                        <h3 class="font-headline-md text-[24px] text-on-surface mb-4">IoT Innovation Award</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Recognized for EcoSense hardware
+                            design.</p>
+                    </div>
+                    <div
+                        class="md:col-span-2 bg-surface-container p-8 rounded-[2rem] flex flex-col justify-between soft-shadow">
+                        <div class="font-label-caps text-label-caps mb-4 text-on-surface-variant">RECOGNITION</div>
+                        <h3 class="font-headline-md text-[32px] text-on-surface mb-4">Featured Designer on Dribbble</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Selected UI concepts featured on
+                            front page for minimal luxury tech aesthetic.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 9: About Me -->
+        <section class="py-section-gap bg-background">
+            <div
+                class="flex flex-col md:flex-row w-full max-w-container-max mx-auto h-[800px] rounded-[3rem] overflow-hidden soft-shadow mx-margin-mobile md:mx-margin-desktop w-[calc(100%-40px)] md:w-[calc(100%-160px)]">
+                <div class="w-full md:w-1/2 h-1/2 md:h-full relative">
+                    <img alt="Amandeep Workspace" class="w-full h-full object-cover grayscale"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAma_Q33qoeZwDNl2TLFANEeATu1wkcd_N7oAYnFV7p0Gir-GrxqMTS1C-PmmFIsRCH191Q5QrhGaAvd-bt4YQb6k562zIVVS-7sEvCDMtZvwb9GjMSdnLkuYpxnzzZyPvEQNeSBmJuqxPv2-0g5QkMhlwu4bt6rRcJ6R2WnO-ZjVV2ZJCpTywlEIkxYg_Vwd-erFTt86bsVgewkekcsE8_VrfB8YCAtiTm-5fqeltxBZOiIvfeeYU47y0e28TqLpsuJdOL7VZBLUZwqu0" />
+                    <div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+                </div>
+                <div
+                    class="w-full md:w-1/2 h-1/2 md:h-full bg-surface-container p-12 md:p-20 flex flex-col justify-center">
+                    <h2 class="font-headline-lg text-[48px] text-on-surface mb-8">Beyond the Code</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        I am a multidisciplinary creator passionate about the intersection of elegant design and complex
+                        engineering. With a foundation in IoT and Android development, I've evolved to embrace holistic
+                        product design, ensuring that robust systems are accessible and beautiful.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <div class="font-display-xl text-[64px] text-on-surface">15+</div>
+                            <div class="font-label-caps text-label-caps text-on-surface-variant">Projects Completed
+                            </div>
+                        </div>
+                        <div>
+                            <div class="font-display-xl text-[64px] text-on-surface">10+</div>
+                            <div class="font-label-caps text-label-caps text-on-surface-variant">Technologies Mastered
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 10: Philosophy -->
+        <section
+            class="min-h-[60vh] flex items-center justify-center bg-inverse-surface text-inverse-on-surface px-margin-mobile md:px-margin-desktop py-section-gap text-center">
+            <div>
+                <h2
+                    class="font-headline-lg-mobile md:font-headline-lg text-[48px] md:text-[80px] leading-tight max-w-6xl mx-auto">
+                    GOOD DESIGN FEELS <span class="italic text-primary-fixed font-display-xl">INVISIBLE</span>.<br />
+                    GREAT PRODUCTS FEEL <span class="italic text-primary-fixed font-display-xl">EFFORTLESS</span>.
+                </h2>
+            </div>
+        </section>
+        <!-- Section 11: Contact Experience -->
+        <section
+            class="relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden bg-black px-margin-mobile md:px-margin-desktop py-section-gap">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-primary-fixed/20 rounded-full blur-[150px] pointer-events-none">
+            </div>
+            <div class="relative z-10 text-center flex flex-col items-center">
+                <h2
+                    class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-12 max-w-4xl leading-tight">
+                    LET'S BUILD SOMETHING <span class="text-primary-fixed">IMPACTFUL</span>
+                </h2>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <button
+                        class="bg-primary-fixed text-on-primary-fixed px-10 py-5 rounded-full font-label-caps text-[14px] hover:scale-105 transition-transform flex items-center gap-2 box-glow">
+                        GET IN TOUCH
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <button
+                        class="glass-panel text-white px-10 py-5 rounded-full font-label-caps text-[14px] hover:bg-white/10 transition-colors flex items-center gap-2 border border-white/20">
+                        DOWNLOAD RESUME
+                        <span class="material-symbols-outlined">download</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Work Section -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-background">
+            <div class="max-w-container-max mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                    <div>
+                        <div
+                            class="font-label-caps text-label-caps text-on-surface-variant mb-4 flex items-center gap-2">
+                            <span class="w-8 h-[1px] bg-outline"></span>
+                            SELECTED PROJECTS
+                        </div>
+                        <h2 class="font-headline-md text-headline-md text-on-surface">Featured Work</h2>
+                    </div>
+                    <button
+                        class="text-on-surface font-label-caps text-label-caps hover:text-primary transition-colors flex items-center gap-2">
+                        View All Work
+                        <span class="material-symbols-outlined">arrow_outward</span>
+                    </button>
+                </div>
+                <!-- Bento / Masonry Style Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <!-- Project 1: PinPal (Large) -->
+                    <div class="md:col-span-8 group cursor-pointer">
+                        <div
+                            class="relative rounded-2xl overflow-hidden soft-shadow bg-surface-container h-[500px] mb-6">
+                            <img alt="PinPal Project"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="A sleek, modern mobile application interface displayed on a high-end smartphone mockup, resting on a clean, minimal white desk. The app UI shows social connectivity features with subtle green accents. The lighting is soft and studio-quality, emphasizing the premium digital product design. Minimal Luxury Tech aesthetic."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2v2d7c_JHFId0nXETm1IlgaL_MgU74luitj8yE7Oea5Fxik6-E2o4Da89WGW8tvHEZqmh_Vdm-UXi2ZCYm5lPxPGl8d4LC-mlVt2tTL7QemMlzVvEC9Egki0hAltzsT5uLAyGjFutRGMZHVmDHmzCnbAnBGgffciee_bhnMmMOeH3drFlUBB2PHvREiFnLlkXB9Miacxh3OvXhlx_hjkcOxxq8qWitOGYI1US2iSpKyU7nFcZRoa4gIDBPUQWCLg5USd6tdCg2pfv" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span
+                                    class="glass-panel text-white px-4 py-2 rounded-full font-label-caps text-label-caps flex items-center gap-2">
+                                    View Case Study <span
+                                        class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-headline-md text-[24px] text-on-surface mb-2">PinPal</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Social Connectivity
+                                    Application</p>
+                            </div>
+                            <div class="flex gap-2 font-label-caps text-[10px] text-on-surface-variant">
+                                <span class="px-3 py-1 rounded-full border border-outline-variant">Kotlin</span>
+                                <span class="px-3 py-1 rounded-full border border-outline-variant">Firebase</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2: EcoSense (Tall) -->
+                    <div class="md:col-span-4 group cursor-pointer">
+                        <div
+                            class="relative rounded-2xl overflow-hidden soft-shadow bg-surface-container h-[500px] mb-6">
+                            <img alt="EcoSense Project"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="A macro shot of a sophisticated IoT hardware device circuit board (like an ESP32) integrated elegantly into a sleek, minimalist white casing. Subtle neon green LEDs indicate operation. The background is a dark, moody grey, creating a high-contrast, premium tech editorial look. Minimal Luxury Tech vibe."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK5hwcE1mP7GSQm5KFq_11bjEWZnR74o5imZggxz8Sm2ZSaAAPkFBEZWt5VWkXfExYDERfolFIaYue2iX97RgxaUjoeryfWuPl6xrmZlscEoiNjQyE_0H1PbB2pIR_C2yd4aLXGmEaUt8js_sX34JCUaMN7YUBAA-s2eZeMZdidQBCArGEPlhnvkdrMhFoZcsh9SC7Nwm_PiGb-JKP5BGwfX0vrdX11yNGTZt_nZhepCcO5LXYGn3xPKzYUuzs7O_jrDQ86owFz13e" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                                <span
+                                    class="glass-panel text-white px-4 py-2 rounded-full font-label-caps text-label-caps flex items-center gap-2">
+                                    View Detail <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-start flex-col gap-3">
+                            <div>
+                                <h3 class="font-headline-md text-[24px] text-on-surface mb-2">EcoSense</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Environmental IoT
+                                    Monitoring</p>
+                            </div>
+                            <div class="flex gap-2 font-label-caps text-[10px] text-on-surface-variant">
+                                <span class="px-3 py-1 rounded-full border border-outline-variant">IoT</span>
+                                <span class="px-3 py-1 rounded-full border border-outline-variant">ESP32</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3: Desk Bot (Square) -->
+                    <div class="md:col-span-4 group cursor-pointer">
+                        <div
+                            class="relative rounded-2xl overflow-hidden soft-shadow bg-surface-container h-[400px] mb-6">
+                            <img alt="Desk Bot Project"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="A small, elegantly designed robotic desk companion. It has a smooth, matte white finish with subtle glowing green accents. It sits on a premium wooden desk beside a high-end laptop. The lighting is soft and natural, emphasizing a blend of modern technology and warm aesthetics. Minimal Luxury Tech style."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZeXU0qLKYAOv6UT5FZdnJbpGXXHXBFjHR7tab2JFPGD6xpF24iwhFi3EXiBD_LEbgaF9u3PcnrK-t8zPz8dppb3CitMK7qUAUOTUyJOx-1escKFkqUZxBW_gKzzNOl_ZqqRS-29bzBEb5OEbRVruk-684pzgHCX17BTEi6gFcRHcV9bOyDpp0hfkk9EV8mVwf2I0qrkf2B34BYYi90YpMRzlKNYg3zm9aJOqe8nBwjZz4BHLquVAUGGXey33TsTlYs6_xR682seN5" />
+                        </div>
+                        <div class="flex justify-between items-start flex-col gap-3">
+                            <div>
+                                <h3 class="font-headline-md text-[24px] text-on-surface mb-2">Desk Bot</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Interactive Assistant</p>
+                            </div>
+                            <div class="flex gap-2 font-label-caps text-[10px] text-on-surface-variant">
+                                <span class="px-3 py-1 rounded-full border border-outline-variant">Arduino</span>
+                                <span class="px-3 py-1 rounded-full border border-outline-variant">Robotics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4: Healthy Leaves (Wide) -->
+                    <div class="md:col-span-8 group cursor-pointer">
+                        <div
+                            class="relative rounded-2xl overflow-hidden soft-shadow bg-surface-container h-[400px] mb-6">
+                            <img alt="Healthy Leaves Project"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="A visual representation of Machine Learning applied to nature. A split-screen composition: one half shows a vibrant, detailed green leaf, the other half shows complex data visualization overlays and code snippets in a sleek dark mode interface. High-end editorial tech aesthetic, symbolizing TensorFlow and ML."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGAFJQqvTMrH2SU9d_9Z8Tp1y_xMfnfrpLdrYMsPQrRv0c_XGnMiCKRvp-by7Adm4IylZ1xzfYe0tl6jpqTkZ5CGjy8dUHee4LrfzmMYJKZRI9237pW7ZbbPqDHqrSyf6Ny4LXjywHbITCnVRtJ9Glf6NiLloG4MhkQsUMGcTt9sxnWQb0M2WAoFLt547aeElVz28nM8MyGUMdzoKOfdKkUnp6BU6ySCKysXTB8CET1WHBHPIVv5qywEoxFrw0iea1CSJmb2OUlxYP" />
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-headline-md text-[24px] text-on-surface mb-2">Healthy Leaves</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Plant Disease Detection AI
+                                </p>
+                            </div>
+                            <div class="flex gap-2 font-label-caps text-[10px] text-on-surface-variant">
+                                <span class="px-3 py-1 rounded-full border border-outline-variant">TensorFlow</span>
+                                <span class="px-3 py-1 rounded-full border border-outline-variant">ML</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Section 10: Contact -->
+        <section class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-gutter py-section-gap min-h-screen flex flex-col justify-center" id="contact">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            <!-- Left Side: Editorial & Info -->
+            <div class="lg:col-span-6 flex flex-col space-y-12 pr-0 lg:pr-12">
+                <div class="space-y-6">
+                    <div
+                        class="inline-flex items-center gap-3 bg-surface-container py-2 px-4 rounded-full border border-outline-variant/30 w-max">
+                        <div class="relative flex h-3 w-3 items-center justify-center">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-fixed opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </div>
+                        <span
+                            class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Available
+                            for projects</span>
+                    </div>
+                    <h1
+                        class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight leading-tight">
+                        LET'S BUILD SOMETHING IMPACTFUL.
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Have a project in mind or just want to chat about design and technology? Drop a message. I'm
+                        currently based in <span class="font-semibold text-on-surface">New Delhi, India</span>.
+                    </p>
+                </div>
+                <!-- Local Time Indicator -->
+                <div class="flex items-center gap-2 text-on-surface-variant font-label-caps text-label-caps uppercase">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">schedule</span>
+                    <span>Local Time:</span>
+                    <span class="text-on-surface font-semibold ml-1" id="local-time">02:34 AM IST</span>
+                </div>
+                <!-- Socials -->
+                <div class="pt-8 border-t border-outline-variant/30">
+                    <h3 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-6">
+                        Connect</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <a class="group flex items-center justify-center w-14 h-14 rounded-full border border-outline-variant/50 hover:border-primary hover:bg-primary/5 transition-colors magnetic-interaction"
+                            href="#">
+                            <span
+                                class="font-body-md text-on-surface group-hover:text-primary transition-colors">Li</span>
+                        </a>
+                        <a class="group flex items-center justify-center w-14 h-14 rounded-full border border-outline-variant/50 hover:border-primary hover:bg-primary/5 transition-colors magnetic-interaction"
+                            href="#">
+                            <span
+                                class="font-body-md text-on-surface group-hover:text-primary transition-colors">Gh</span>
+                        </a>
+                        <a class="group flex items-center justify-center w-14 h-14 rounded-full border border-outline-variant/50 hover:border-primary hover:bg-primary/5 transition-colors magnetic-interaction"
+                            href="#">
+                            <span
+                                class="font-body-md text-on-surface group-hover:text-primary transition-colors">Be</span>
+                        </a>
+                        <a class="group flex items-center justify-center w-14 h-14 rounded-full border border-outline-variant/50 hover:border-primary hover:bg-primary/5 transition-colors magnetic-interaction"
+                            href="#">
+                            <span
+                                class="font-body-md text-on-surface group-hover:text-primary transition-colors">In</span>
+                        </a>
+                        <a class="group flex items-center justify-center w-14 h-14 rounded-full border border-outline-variant/50 hover:border-primary hover:bg-primary/5 transition-colors magnetic-interaction"
+                            href="#">
+                            <span
+                                class="font-body-md text-on-surface group-hover:text-primary transition-colors">Dr</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Side: Minimal Form -->
+            <div class="lg:col-span-6 lg:pl-8 mt-12 lg:mt-0">
+                <div
+                    class="bg-surface-container-lowest/50 backdrop-blur-xl border border-surface-container-highest p-8 md:p-12 rounded-[24px] shadow-[0_20_40px_rgba(0,0,0,0.02)]">
+                    <form action="#" class="space-y-10" method="POST">
+                        <!-- Name & Email Row -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="relative group">
+                                <label
+                                    class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2 transition-colors group-focus-within:text-primary"
+                                    for="name">Name</label>
+                                <input
+                                    class="w-full bg-transparent border-0 border-b border-outline-variant/50 py-3 text-on-surface font-body-lg text-body-lg focus:ring-0 focus:border-primary focus:border-b-2 transition-all placeholder:text-surface-dim"
+                                    id="name" name="name" placeholder="John Doe" required="" type="text">
+                            </div>
+                            <div class="relative group">
+                                <label
+                                    class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2 transition-colors group-focus-within:text-primary"
+                                    for="email">Email</label>
+                                <input
+                                    class="w-full bg-transparent border-0 border-b border-outline-variant/50 py-3 text-on-surface font-body-lg text-body-lg focus:ring-0 focus:border-primary focus:border-b-2 transition-all placeholder:text-surface-dim"
+                                    id="email" name="email" placeholder="hello@example.com" required="" type="email">
+                            </div>
+                        </div>
+                        <!-- Subject -->
+                        <div class="relative group">
+                            <label
+                                class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2 transition-colors group-focus-within:text-primary"
+                                for="subject">Subject</label>
+                            <input
+                                class="w-full bg-transparent border-0 border-b border-outline-variant/50 py-3 text-on-surface font-body-lg text-body-lg focus:ring-0 focus:border-primary focus:border-b-2 transition-all placeholder:text-surface-dim"
+                                id="subject" name="subject" placeholder="Project Inquiry" type="text">
+                        </div>
+                        <!-- Message -->
+                        <div class="relative group">
+                            <label
+                                class="block font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-2 transition-colors group-focus-within:text-primary"
+                                for="message">Message</label>
+                            <textarea
+                                class="w-full bg-transparent border-0 border-b border-outline-variant/50 py-3 text-on-surface font-body-lg text-body-lg focus:ring-0 focus:border-primary focus:border-b-2 transition-all resize-none placeholder:text-surface-dim"
+                                id="message" name="message" placeholder="Tell me about your vision..." required=""
+                                rows="4"></textarea>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="pt-4">
+                            <button
+                                class="group relative inline-flex items-center justify-center gap-3 bg-on-background text-surface-container-lowest font-label-caps text-label-caps uppercase tracking-widest px-10 py-5 rounded-full overflow-hidden transition-all hover:shadow-[0_0_30px_rgba(124,255,79,0.2)]"
+                                type="submit">
+                                <span class="relative z-10 transition-colors group-hover:text-primary-fixed">Send
+                                    Message</span>
+                                <span
+                                    class="material-symbols-outlined relative z-10 text-[18px] transition-transform group-hover:translate-x-1 group-hover:text-primary-fixed">arrow_forward</span>
+                                <div
+                                    class="absolute inset-0 border border-transparent rounded-full group-hover:border-primary-fixed transition-colors duration-300">
+                                </div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="relative w-full pt-section-gap pb-gutter overflow-hidden bg-surface dark:bg-on-background border-t border-outline-variant/30 flex flex-col items-center justify-center text-center px-margin-desktop">
+        <div
+            class="font-display-xl text-[clamp(80px,20vw,240px)] leading-[0.8] text-on-surface dark:text-surface-bright opacity-10 select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none whitespace-nowrap">
+            AMANDEEP
+        </div>
+        <div class="relative z-10 flex flex-col items-center gap-8 parallax-scroll-reveal">
+            <h2 class="font-headline-md text-headline-md text-on-surface">Let's build something extraordinary.</h2>
+            <div class="flex gap-6 mb-8">
+                <a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps"
+                    href="#">Dribbble</a>
+                <a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps"
+                    href="#">LinkedIn</a>
+                <a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps"
+                    href="#">Instagram</a>
+                <a class="text-on-surface-variant dark:text-surface-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps"
+                    href="#">Behance</a>
+            </div>
+            <p class="font-label-caps text-label-caps text-on-surface-variant/50">
+                © 2024 AMANDEEP KUMAR. ENGINEERED WITH PRECISION.
+            </p>
+        </div>
+    </footer>
+    <!-- Scripts for Interactions -->
+    <script>
+// Update Local Time
+        function updateTime() {
+            const timeElement = document.getElementById('local-time');
+            if (timeElement) {
+                const now = new Date();
+                // Simulating New Delhi time (IST is UTC+5:30)
+                const options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: true };
+                timeElement.textContent = now.toLocaleTimeString('en-US', options) + ' IST';
+            }
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Magnetic Hover Effect
+        const magneticElements = document.querySelectorAll('.magnetic-interaction');
+
+        magneticElements.forEach((elem) => {
+            elem.addEventListener('mousemove', (e) => {
+                const rect = elem.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                // Adjust sensitivity (lower number = less movement)
+                const moveX = x * 0.3;
+                const moveY = y * 0.3;
+
+                elem.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            });
+
+            elem.addEventListener('mouseleave', () => {
+                elem.style.transform = `translate(0px, 0px)`;
+                // Smooth return transition is handled by CSS classes if added, 
+                // but setting a brief transition here ensures it snaps back gracefully
+                elem.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
+                setTimeout(() => { elem.style.transition = ''; }, 500);
+            });
+        });
+
+        // Simple Reveal on Scroll
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.parallax-scroll-reveal').forEach(el => observer.observe(el));
+    
+    </script>
+</body>
+
+</html>
