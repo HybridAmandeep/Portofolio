@@ -1,0 +1,9 @@
+# Canonical domain redirects to amandeepkumar.dev
+https://connectwithamandeep.netlify.app/* https://amandeepkumar.dev/:splat 301!
+https://amandeepkumar.me/* https://amandeepkumar.dev/:splat 301!
+http://amandeepkumar.me/* https://amandeepkumar.dev/:splat 301!
+https://www.amandeepkumar.me/* https://amandeepkumar.dev/:splat 301!
+http://www.amandeepkumar.me/* https://amandeepkumar.dev/:splat 301!
+http://amandeepkumar.dev/* https://amandeepkumar.dev/:splat 301!
+http://www.amandeepkumar.dev/* https://amandeepkumar.dev/:splat 301!
+https://www.amandeepkumar.dev/* https://amandeepkumar.dev/:splat 301!
