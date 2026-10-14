@@ -77,7 +77,7 @@ module.exports = async function handler(req, res) {
 ${trimmedMessage}
             </div>
             <p style="margin-top: 24px; font-size: 12px; color: #a1a1aa; border-top: 1px solid #f4f4f5; padding-top: 12px;">
-              Sent from Amandeep Kumar Portfolio (Vercel Serverless Function).
+              Sent from Amandeep Kumar Portfolio.
             </p>
           </div>
         `
